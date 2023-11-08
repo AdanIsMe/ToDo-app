@@ -1,0 +1,111 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background: linear-gradient(to right, #DADDB1, #B3A492);
+}
+
+.todo-app{
+    width: 100%;
+    max-width: 540px;
+    background: #fff;
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius: 10px;
+}
+
+.todo-app h2{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    color: #6C3428;
+
+}
+
+.todo-app h2 img{
+    width: 30px;
+    margin-left: 10px;
+}
+
+
+/*in-order to have the input field and the Add button next to one another*/
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #edeef0; /*Gives the slight Gray color underneath the input field*/
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-bottom: 25px;
+}
+
+#input-field{
+    flex: 1; /*to take up all the availabe space for it*/
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+}
+
+#button-field{
+    border: none;
+    outline: none;
+    padding: 16px 50px;
+    background: #BFB29E;
+    color: #fff;
+    font: 16px;
+    cursor: pointer;
+    border-radius: 40px;
+}
+
+ul li{
+    list-style: none;
+    font-size: 17px;
+    padding: 12px 8px 12px 50px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+}
+
+
+ul li::before{
+    content: '';
+    position: absolute;
+    top: 9px;
+    left: 8px;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-image: url(images/unchecked-removebg-preview.png);
+    background-size: cover;
+    background-position: center;
+}
+
+ul li.checked{
+    color: #555;
+    text-decoration: line-through;
+}
+
+ul li.checked::before{
+    background-image: url(images/checked-removebg-preview.png);
+}
+
+/*for removing a task from the to-do list*/
+ul li span{
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    color: #555;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%; /*the result: a circle shape*/
+}
+
+ul li span:hover{
+    background: #edeef0;
+}
